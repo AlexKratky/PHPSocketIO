@@ -1,0 +1,18 @@
+{
+    "name": "alexkratky/php-socketio",
+    "description": "PHP class to with Socket.io.",
+    "keywords": ["php", "socket", "realtime", "socketio"],
+    "homepage": "https://panx.eu/",
+    "license": ["MIT"],
+    "authors": [{
+            "name": "Alex Kratky",
+            "homepage": "https://alexkratky.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0"
+    },
+    "autoload": {
+        "files": ["src/PHPSocketIO.php"]
+    }
+}
