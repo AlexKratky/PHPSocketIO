@@ -43,17 +43,17 @@ class PHPSocketIO
 
         $POST = ["channel" => $channel, "password" => self::$password, "data" => json_encode($data, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_QUOT)];
 
-        $POST_string = null;
+        $string = null;
 
         foreach ($POST as $key => $value) {
-            $POST_string .= $key . '=' . $value . '&';
+            $string .= $key . '=' . $value . '&';
         }
-        rtrim($POST_string, '&');
+        rtrim($string, '&');
 
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_POST, count($POST));
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $POST_string);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $string);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
         $response = curl_exec($ch);
