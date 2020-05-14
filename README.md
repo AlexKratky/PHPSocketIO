@@ -1,6 +1,6 @@
 # PHPSocketIO
 
-Class to work with cache.
+Class to work with realtime socket (Socket.io).
 
 ### Installation
 
